@@ -34,6 +34,7 @@ const series = [
     {
     id: 3,
     nome: "One Piece",
+    image: "https://imgs.search.brave.com/Cz_i_q_a_qgwAuvtRkSNTK6pvdaYo0gQEkClgZP2YXw/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zbS5p/Z24uY29tL2lnbl9i/ci9zY3JlZW5zaG90/L2RlZmF1bHQvYWxh/YmFzdGEtb25lLXBp/ZWNlX3d3engucG5n",
     genero: "Anime",
     subgenero: "Ação, Aventura, Shounen",
     duracao: 1500 +" epsódios",
@@ -47,6 +48,7 @@ app.get("/series", (req, res) => {
 app.post("/series", (req, res) => {
     const novaSerie = {
         id: series.length + 1,
+        image: req.body.image,
         nome: req.body.nome,
         genero:req.body.genero,
         subgenero: req.body.subgenero,
